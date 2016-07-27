@@ -1,0 +1,25 @@
+<ion-view view-title="CattleCalc">
+
+
+  <div class="tabs-striped tabs-top has-tabs-top tabs-background-positive tabs-color-light">
+    <div class="tabs">
+      <a class="tab-item active" ng-click="toggleTab('purchase')" ng-class="{ 'active': purchaseTab }">
+        <!-- <i class="icon ion-home"></i> -->
+        <span>Purchase</span>
+      </a>
+      <a class="tab-item" ng-click="toggleTab('sale')" ng-class="{ 'active': !purchaseTab }">
+        <!-- <i class="icon ion-star"></i> -->
+        <span>Sale</span>
+      </a>
+    </div>
+  </div>
+
+  <ion-content>
+<!--     <ion-list>
+      <ion-item ng-repeat="playlist in playlists" href="#/app/playlists/{{playlist.id}}">
+        {{playlist.title}}
+      </ion-item>
+    </ion-list> -->
+  </ion-content>
+</ion-view>
+

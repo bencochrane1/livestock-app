@@ -1,0 +1,14 @@
+/* Empty. Add your own CSS if you like */
+
+
+.bar-stable.bar.bar-header.has-tabs-top, .bar-stable.bar.bar-header {
+	background: #387ef5;
+}
+
+.title.title-center.header-item, .bar-stable .button.button-clear, ion-header-bar.bar-stable.bar.bar-header.has-tabs-top h1.title, .bar-stable.bar.bar-header h1.title {
+	color: white;	
+}
+
+.tab-item span {
+	font-size: 1.3em;
+}
