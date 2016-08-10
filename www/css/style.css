@@ -2,7 +2,7 @@
 
 
 .bar-stable.bar.bar-header.has-tabs-top, .bar-stable.bar.bar-header {
-	background: #387ef5;
+	background: #4584f0;
 }
 
 .title.title-center.header-item, .bar-stable .button.button-clear, ion-header-bar.bar-stable.bar.bar-header.has-tabs-top h1.title, .bar-stable.bar.bar-header h1.title {
@@ -11,4 +11,32 @@
 
 .tab-item span {
 	font-size: 1.3em;
+	font-weight: bold;
+}
+
+.tabs-striped.tabs-background-positive .tabs {
+	background: #4584f0;	
+}
+
+.top-dash {
+	background: #dfdede;
+}
+
+.top-dash .row.top-row {
+	margin-top: 49px;
+}
+
+.text-main {
+	color: #4c4c4c;
+	font-size: 2.5em;
+}
+
+.text-center {
+	width: 100%;
+}
+
+.sub-dash {
+	margin-top: 15px;
+    font-size: 1.2em;
+    color: grey;
 }
