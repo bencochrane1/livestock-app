@@ -64,6 +64,87 @@ angular.module('starter.controllers', [])
       console.log('$scope.purchaseTab', $scope.purchaseTab);
     }
   }
+
+
+
+
+
+  // $scope.groups = [];
+  // for (var i=0; i<10; i++) {
+  //   $scope.groups[i] = {
+  //     name: i,
+  //     items: []
+  //   };
+  //   for (var j=0; j<3; j++) {
+  //     $scope.groups[i].items.push(i + '-' + j);
+  //   }
+  // }
+
+  $scope.totalShown = true;
+
+  $scope.purchases = [
+    {
+      name: 'Purchase Outputs',
+      items: [
+        {
+          name: 'Cattle Value',
+          totalValue: 59310,
+          perHeadValue: 4236.43,
+          unit: "$"
+        },
+        {
+          name: 'Agent Commission',
+          totalValue: 1.4,
+          perHeadValue: 1.4,
+          unit: "%"
+        },
+        {
+          name: 'Net Cattle Value',
+          totalValue: 58479,
+          perHeadValue: 4100,
+          unit: "$"
+        }      
+      ]
+    }, 
+    {
+      name: 'Purchase Inputs',
+      items: []
+    },     
+  ];
+  
+  /*
+   * if given group is the selected group, deselect it
+   * else, select the given group
+   */
+
+   $scope.togglePerHeadOrTotal  = togglePerHeadOrTotal;
+
+   function togglePerHeadOrTotal(input) {
+    if (input === 'perHead') {
+      $scope.totalShown = false;
+    } else if (input === 'total') {
+      $scope.totalShown = true;
+    }
+   }
+
+
+  $scope.toggleGroup = function(group) {
+    if ($scope.isGroupShown(group)) {
+      $scope.shownGroup = null;
+    } else {
+      $scope.shownGroup = group;
+    }
+  };
+  $scope.isGroupShown = function(group) {
+    return $scope.shownGroup === group;
+  };
+
+
+
+
+
+
+
 })
 
 .controller('SearchCtrl', function($scope) {

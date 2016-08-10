@@ -23,15 +23,50 @@
 
       <div class="row">
         <div class="col">
-          <div class="row text-main"><span class="text-center">+8.90%</span></div>
-          <div class="row"><span class="text-center sub-dash">ROI</span></div>
+          <div class="row text-main"><span class="wide text-center">+8.90%</span></div>
+          <div class="row"><span class="text-center sub-dash wide">ROI</span></div>
         </div>
         <div class="col">
-          <div class="row text-main"><span class="text-center">$2.39</span></div>
-          <div class="row"><span class="text-center sub-dash">Price/Head</span></div>
+          <div class="row text-main"><span class="wide text-center">$2.39</span></div>
+          <div class="row"><span class="text-center sub-dash wide">Price/Head</span></div>
         </div>
       </div>
     </div>
+
+
+    <ion-list>
+
+      <div ng-repeat="group in purchases">
+        <ion-item class="item-stable"
+                  ng-click="toggleGroup(group)"
+                  ng-class="{active: isGroupShown(group)}">
+                  <div class="row">
+                    <div class="col"><span>{{group.name}}</span></div>
+                    <div class="col text-right main-dropdown"><i class="icon" ng-class="isGroupShown(group) ? 'ion-chevron-up' : 'ion-chevron-down'"></i></div>
+                  </div>
+            
+        </ion-item>
+        <ion-item ng-if="isGroupShown(group)">
+          <div class="button-bar">
+            <a class="button" ng-class="{'active-toggle': totalShown }" ng-click="togglePerHeadOrTotal('total')">Total</a>
+            <a class="button" ng-class="{'active-toggle': !totalShown }" ng-click="togglePerHeadOrTotal('perHead')">Per Head</a>
+          </div>
+        </ion-item>
+        <ion-item class="item-accordion"
+                  ng-repeat="item in group.items"
+                  ng-show="isGroupShown(group)">
+                  <div class="row">
+                    <div class="col">{{ item.name }}</div>
+                    <div class="col text-right">
+                      <span ng-if="item.unit === '$'">{{ item.unit }}</span>
+                      <span ng-if="totalShown">{{ item.totalValue }}</span>
+                      <span ng-if="!totalShown">{{ item.perHeadValue }}</span>
+                      <span ng-if="item.unit === '%'">{{ item.unit }}</span>
+                    </div>
+                  </div>
+        </ion-item>
+      </div>
+    </ion-list>    
 
   </ion-content>
 </ion-view>

@@ -31,7 +31,7 @@
 	font-size: 2.5em;
 }
 
-.text-center {
+.wide {
 	width: 100%;
 }
 
@@ -40,3 +40,42 @@
     font-size: 1.2em;
     color: grey;
 }
+
+.main-dropdown {
+	font-size: 1.5em;
+}
+
+a.button.active-toggle {
+	color: white;
+}
+
+a.button.active-toggle.activated {
+	background: #4584f0;
+}
+
+.active-toggle, .activated {
+	background: #4584f0;
+	color: white;
+	font-weight: bold;
+}
+
+
+
+
+
+.list .item.item-accordion {
+  line-height: 38px;
+  padding-top: 0;
+  padding-bottom: 0;
+  transition: 0.09s all linear;
+}
+.list .item.item-accordion.ng-hide {
+  line-height: 0px;
+}
+.list .item.item-accordion.ng-hide-add,
+.list .item.item-accordion.ng-hide-remove {
+  display: block !important;
+}
+
+
+
